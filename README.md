@@ -6,9 +6,11 @@
 Firstly, download 300 days of historical stock prices using yfinance. Calculates daily percentage returns and the covariance matrix to track how stocks move together.
 
 ### Random Portfolio Allocation
+
 This assigns random weights to each stock within the portfolio, normalised to sum to 100%, representing one possible portfolio construction.
 
 ### The Monte Carlo Simulation
+
 Generates 1000 independent simulations of portfolio value over 100 days. Each simulation:
 1. Generates random daily returns drawn from a normal distribution
 2. Applies Cholesky decomposition to obtain correlations between the returns 
@@ -16,9 +18,11 @@ Generates 1000 independent simulations of portfolio value over 100 days. Each si
 4. Stores results which can be observed in the constructed plots
 
 ### Cholesky Decomposition?
+
 Random noise would mean that the stocks are uncorrelated, as they would move independently in pure randomness. Cholesky decompositions allows for the transformation of this into correlated noise using historical behaviour. For example, if the stocks of HSBA and VOD historically moved together, the simulation would acknowledge this relationship in terms of correlation.
 
 ### Interpreting Plot
+
 The 1000 coloured lines represent 1000 possible outcomes:
 - **Central tendency:** Average expected portfolio growth
 - **Top line:** Best-case scenario (95th percentile)
